@@ -164,6 +164,32 @@
     }
     .pick strong { color: #7a4a0c; }
 
+    .price-banner {
+      background: rgba(20, 48, 72, 0.9);
+      color: #f7fbff;
+      border: 1px solid rgba(255, 231, 194, 0.45);
+      border-radius: 12px;
+      padding: 0.95rem 1rem;
+      margin: 0 0 1rem;
+    }
+    .price-banner strong { color: #ffe7c2; }
+    .for-both {
+      display: inline-block;
+      margin-left: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--ink-soft);
+      vertical-align: middle;
+    }
+    .per-person {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      font-weight: 500;
+      margin-top: 0.2rem;
+    }
+
     .note {
       font-size: 0.95rem;
       color: var(--ink-soft);
@@ -477,10 +503,14 @@
 
     <section class="panel intro" aria-labelledby="overview">
       <h2 id="overview" style="color:var(--ink);text-shadow:none;margin-top:0;font-size:1.25rem;">The short version</h2>
-      <p>These are round-trip flights from Atlanta (ATL) to Reno (RNO) on <strong>Sunday, December 20</strong> out and <strong>Sunday, December 27</strong> back. Prices are for <strong>two adults</strong> in economy and do not include checked bags.</p>
-      <p class="note">Southwest <strong>Basic</strong> is cheaper, but seat selection costs extra. <strong>Choice</strong> includes seat selection, so you can sit together. On the Southwest options below, Choice is $1,513 and Basic is $1,313.</p>
+      <div class="price-banner">
+        <strong>Every price on this page is the round-trip total for both parents (2 travelers), not a per-person fare.</strong>
+        A smaller “approx. per person” figure on each card is simply half of that total.
+      </div>
+      <p>These are round-trip flights from Atlanta (ATL) to Reno (RNO) on <strong>Sunday, December 20</strong> out and <strong>Sunday, December 27</strong> back. Every price is the <strong>round-trip total for both parents (two adults)</strong> in economy, not the cost for one person, and does not include checked bags.</p>
+      <p class="note">Southwest <strong>Basic</strong> is cheaper, but seat selection costs extra. <strong>Choice</strong> includes seat selection, so you can sit together. On the Southwest options below, Choice is $1,513 total for both and Basic is $1,313 total for both.</p>
       <div class="pick">
-        <strong>Top recommendation: Option 1 — Southwest via Nashville, $1,513 on Choice.</strong>
+        <strong>Top recommendation: Option 1 — Southwest via Nashville, $1,513 total for both on Choice.</strong>
         It is the cheapest way to sit together, Nashville is basically on the way, and it lands in Reno earliest, at 2:30 PM.
       </div>
     </section>
@@ -488,12 +518,12 @@
     <h2>Quick comparison</h2>
     <div class="panel table-wrap" style="padding:0.9rem 0.6rem 0.4rem;">
       <table>
-        <caption>Prices with seat selection, except Option 6, whose cheapest fare may charge extra for seats. Times are local.</caption>
+        <caption>Every amount is the round-trip total for both parents (2 travelers). Seat selection is included except on Option 6, whose cheapest fare may charge extra for seats. Times are local.</caption>
         <thead>
           <tr>
             <th>Option</th>
             <th>Airline</th>
-            <th>Price w/ seat selection</th>
+            <th>Total for 2 (round trip)</th>
             <th>Outbound</th>
             <th>Return</th>
             <th>Stops</th>
@@ -503,7 +533,7 @@
           <tr class="best">
             <td><a href="#option-1">1. Via Nashville</a></td>
             <td>Southwest</td>
-            <td class="price">$1,513 <span class="muted">Choice</span></td>
+            <td class="price">$1,513 <span class="muted">total for both · Choice</span></td>
             <td>10:00 AM → 2:30 PM</td>
             <td>9:05 AM → 7:45 PM</td>
             <td>1 stop each way (BNA)</td>
@@ -511,7 +541,7 @@
           <tr>
             <td><a href="#option-2">2. Via Denver</a></td>
             <td>Southwest</td>
-            <td class="price">$1,513 <span class="muted">Choice</span></td>
+            <td class="price">$1,513 <span class="muted">total for both · Choice</span></td>
             <td>1:25 PM → 5:45 PM</td>
             <td>9:05 AM → 7:45 PM</td>
             <td>1 stop each way (DEN out, BNA back)</td>
@@ -519,7 +549,7 @@
           <tr>
             <td><a href="#option-3">3. Via Austin</a></td>
             <td>Southwest</td>
-            <td class="price">$1,513 <span class="muted">Choice</span></td>
+            <td class="price">$1,513 <span class="muted">total for both · Choice</span></td>
             <td>2:40 PM → 7:30 PM</td>
             <td>9:05 AM → 7:45 PM</td>
             <td>1 stop each way (AUS out, BNA back)</td>
@@ -527,7 +557,7 @@
           <tr>
             <td><a href="#option-4">4. Via Salt Lake City</a></td>
             <td>Delta</td>
-            <td class="price">$2,893 <span class="muted">Main Classic</span></td>
+            <td class="price">$2,893 <span class="muted">total for both · Main Classic</span></td>
             <td>7:55 AM → 11:37 AM</td>
             <td>12:42 PM → 9:31 PM</td>
             <td>1 stop each way (SLC)</td>
@@ -535,7 +565,7 @@
           <tr>
             <td><a href="#option-5">5. Nonstop out</a></td>
             <td>Delta</td>
-            <td class="price">$2,874 <span class="muted">Main Classic</span></td>
+            <td class="price">$2,874 <span class="muted">total for both · Main Classic</span></td>
             <td>7:59 PM → 9:58 PM</td>
             <td>12:42 PM → 9:31 PM</td>
             <td>Nonstop out, 1 stop back (SLC)</td>
@@ -543,7 +573,7 @@
           <tr>
             <td><a href="#option-6">6. Via Denver</a></td>
             <td>United</td>
-            <td class="price">From $1,933 <span class="muted">seats may cost extra</span></td>
+            <td class="price">From $1,933 <span class="muted">total for both · seats may cost extra</span></td>
             <td>8:30 AM → 12:43 PM</td>
             <td>1:45 PM → 10:54 PM</td>
             <td>1 stop each way (DEN)</td>
@@ -561,8 +591,9 @@
           <h3>1. Via Nashville <span class="badge">Top pick</span></h3>
         </div>
         <div class="fares">
-          <div class="amount">$1,513</div>
-          <span class="alt">Choice, seats included · Basic $1,313</span>
+          <div class="amount">$1,513 <span class="for-both">total for both</span></div>
+          <span class="alt">Choice, seats included · Basic $1,313 total for both</span>
+          <span class="per-person">Approx. $756.50 per person (Choice) / $656.50 (Basic)</span>
         </div>
       </div>
       <div class="legs">
@@ -603,8 +634,9 @@
           <h3>2. Via Denver</h3>
         </div>
         <div class="fares">
-          <div class="amount">$1,513</div>
-          <span class="alt">Choice, seats included · Basic $1,313</span>
+          <div class="amount">$1,513 <span class="for-both">total for both</span></div>
+          <span class="alt">Choice, seats included · Basic $1,313 total for both</span>
+          <span class="per-person">Approx. $756.50 per person (Choice) / $656.50 (Basic)</span>
         </div>
       </div>
       <div class="legs">
@@ -646,8 +678,9 @@
           <h3>3. Via Austin</h3>
         </div>
         <div class="fares">
-          <div class="amount">$1,513</div>
-          <span class="alt">Choice, seats included · Basic $1,313</span>
+          <div class="amount">$1,513 <span class="for-both">total for both</span></div>
+          <span class="alt">Choice, seats included · Basic $1,313 total for both</span>
+          <span class="per-person">Approx. $756.50 per person (Choice) / $656.50 (Basic)</span>
         </div>
       </div>
       <div class="legs">
@@ -687,8 +720,9 @@
           <h3>4. Via Salt Lake City</h3>
         </div>
         <div class="fares">
-          <div class="amount">$2,893</div>
+          <div class="amount">$2,893 <span class="for-both">total for both</span></div>
           <span class="alt">Main Classic, seat selection included</span>
+          <span class="per-person">Approx. $1,446.50 per person</span>
         </div>
       </div>
       <div class="legs">
@@ -729,8 +763,9 @@
           <h3>5. Nonstop outbound</h3>
         </div>
         <div class="fares">
-          <div class="amount">$2,874</div>
+          <div class="amount">$2,874 <span class="for-both">total for both</span></div>
           <span class="alt">Main Classic, seat selection included</span>
+          <span class="per-person">Approx. $1,437 per person</span>
         </div>
       </div>
       <div class="legs">
@@ -771,8 +806,9 @@
           <h3>6. Via Denver</h3>
         </div>
         <div class="fares">
-          <div class="amount">From $1,933</div>
+          <div class="amount">From $1,933 <span class="for-both">total for both</span></div>
           <span class="alt">Starting price; seat selection may cost extra on the cheapest fare. Exact fare with seats was not checked.</span>
+          <span class="per-person">Approx. from $966.50 per person</span>
         </div>
       </div>
       <div class="legs">
@@ -809,7 +845,7 @@
     </article>
 
     <footer class="foot">
-      <p>Prices are for two adults in economy and were checked on Google Flights around 2:50pm PT on Sunday, November 22, 2026. They can change. Checked bags are not included.</p>
+      <p>Every price is the round-trip total for both parents (two adults) in economy, not a per-person fare. Prices were checked on Google Flights around 2:50pm PT on Sunday, November 22, 2026. They can change. Checked bags are not included.</p>
       <p>A family of four (two adults, two kids) plans to book the same flights later, so book soon if a fare looks right, and expect totals to scale per person.</p>
     </footer>
   </div>
